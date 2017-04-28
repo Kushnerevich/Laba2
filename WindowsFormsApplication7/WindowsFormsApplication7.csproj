@@ -45,6 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Circle.cs" />
+    <Compile Include="PainterRectangle.cs" />
+    <Compile Include="PainterSqaure.cs" />
+    <Compile Include="PainterLine.cs" />
+    <Compile Include="Painter.cs" />
     <Compile Include="Rectangle.cs" />
     <Compile Include="Square.cs" />
     <Compile Include="Form1.cs">

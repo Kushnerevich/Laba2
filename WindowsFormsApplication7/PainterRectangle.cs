@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication7
 {
-    class PainterLine:Painter
+    class PainterRectangle:Painter
     {
-        public PainterLine(Form1 frm, Button btn,Graphics graph)
+        public PainterRectangle(Form1 frm, Button btn, Graphics graph)
         {
             this.frm = frm;
             this.btn = btn;
@@ -21,8 +18,8 @@ namespace WindowsFormsApplication7
         }
         protected override void Draw()
         {
-            Line line = new Line();
-            graph.DrawLine(new Pen(Color.Red), line.x1=200,line.y1=100,line.x2=200, line.y2=200);
+            Rectangle rec = new Rectangle();
+            graph.DrawRectangle(new Pen(Color.Yellow), rec.x1 = Convert.ToInt32(frm.textBox13.Text), rec.y2 = Convert.ToInt32(frm.textBox14.Text), rec.width = Convert.ToInt32(frm.textBox15.Text), rec.height = Convert.ToInt32(frm.textBox16.Text));
             frm.picture.Refresh();
         }
     }

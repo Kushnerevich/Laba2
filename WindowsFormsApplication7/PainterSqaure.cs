@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication7
 {
-    class PainterLine:Painter
+    class PainterSquare:Painter
     {
-        public PainterLine(Form1 frm, Button btn,Graphics graph)
+        public PainterSquare(Form1 frm, Button btn, Graphics graph)
         {
             this.frm = frm;
             this.btn = btn;
@@ -21,8 +21,8 @@ namespace WindowsFormsApplication7
         }
         protected override void Draw()
         {
-            Line line = new Line();
-            graph.DrawLine(new Pen(Color.Red), line.x1=200,line.y1=100,line.x2=200, line.y2=200);
+            Square sq = new Square();
+            graph.DrawRectangle(new Pen(Color.Yellow), sq.x1 = Convert.ToInt32(frm.textBox10.Text), sq.y1 = Convert.ToInt32(frm.textBox11.Text), sq.length = Convert.ToInt32(frm.textBox12.Text), sq.length);
             frm.picture.Refresh();
         }
     }
